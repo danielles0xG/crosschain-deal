@@ -43,27 +43,16 @@ module.exports = {
             // }
         },
         localhost: {},
-        kovan: {
-            url: KOVAN_RPC_URL,
-            // accounts: [PRIVATE_KEY],
-            accounts: {
-                mnemonic: MNEMONIC,
-            },
+        goerli: {
+            url: "https://rpc.ankr.com/eth_goerli",
+            accounts: [process.env.DEPLOYER_PRIVATE_KEY],
             saveDeployments: true,
         },
-        rinkeby: {
-            url: RINKEBY_RPC_URL,
-            // accounts: [PRIVATE_KEY],
-            accounts: {
-                mnemonic: MNEMONIC,
-            },
+        fujiavax: {
+            url: `https://rpc.ankr.com/avalanche_fuji`,
+            chainId: 43113,
+            accounts: [process.env.DEPLOYER_PRIVATE_KEY],
             saveDeployments: true,
-        },
-        ganache: {
-            url: "http://localhost:8545",
-            accounts: {
-                mnemonic: MNEMONIC,
-            },
         },
     },
     etherscan: {
@@ -84,6 +73,12 @@ module.exports = {
         compilers: [
             {
                 version: "0.8.4",
+            },
+            {
+                version: "0.8.11",
+            },
+            {
+                version: "0.7.6",
             },
         ],
     },

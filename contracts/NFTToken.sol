@@ -23,7 +23,6 @@ contract NFTToken is
     Counters.Counter private _tokenIdCounter;
 
     constructor() ERC721("TOKEN_NAME_PROTO", "PROTO") {
-        console.log("Constructor - This is AWESOME");
     }
 
     function safeMint(address to, string memory _tokenURI) public onlyOwner {
@@ -50,9 +49,10 @@ contract NFTToken is
     function _beforeTokenTransfer(
         address from,
         address to,
-        uint256 tokenId
+        uint256 tokenId,
+        uint256 batchSize
     ) internal override(ERC721, ERC721Enumerable) whenNotPaused {
-        super._beforeTokenTransfer(from, to, tokenId);
+        super._beforeTokenTransfer(from, to, tokenId,batchSize);
     }
 
     function _burn(uint256 tokenId)
@@ -74,7 +74,7 @@ contract NFTToken is
     function supportsInterface(bytes4 interfaceId)
         public
         view
-        override(ERC721, ERC721Enumerable)
+        override(ERC721, ERC721Enumerable,ERC721URIStorage)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
