@@ -33,4 +33,6 @@ Existing bridges are forced to make trade-offs on the following core bridge feat
 
 **Contribute**
 Ping me on Twitter
+
+
 [![Twitter Follow](https://img.shields.io/twitter/follow/danielles0xG?label=Follow%20me%20%40danielles0xG&style=social)](https://twitter.com/danielles0xG)
