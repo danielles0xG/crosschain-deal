@@ -32,6 +32,7 @@ Existing bridges are forced to make trade-offs on the following core bridge feat
 -   Unified Liquidity: Access to a single liquidity pool across multiple chains.
 
 **Contribute**
+
 Ping me on Twitter
 
 
