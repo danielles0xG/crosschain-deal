@@ -21,7 +21,7 @@ The test will sleep (delay execution) to allow transaction processing on Stargat
  - Install dependencies with ```npm install```
  - Compile contracts with ```hardhat compile```
  - Test End-to-end cross-chain ```hardhat test```
- - 
+  
 **Why Stargate?**
 
 Stargate is the first bridge to solve the bridging trilemma.
@@ -30,3 +30,7 @@ Existing bridges are forced to make trade-offs on the following core bridge feat
 -   Instant Guaranteed Finality
 -   Native Assets: No wrapped assets on the destination chain.
 -   Unified Liquidity: Access to a single liquidity pool across multiple chains.
+
+**Contribute**
+Ping me on Twitter
+[![Twitter Follow](https://img.shields.io/twitter/follow/danielles0xG?label=Follow%20me%20%40danielles0xG&style=social)](https://twitter.com/danielles0xG)
