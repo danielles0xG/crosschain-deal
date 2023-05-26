@@ -1,0 +1,23 @@
+{
+  "name": "nextjs-wagmi",
+  "version": "2.4.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.2",
+    "@web3modal/ethereum": "2.4.1",
+    "@web3modal/react": "2.4.1",
+    "next": "13.4.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "viem": "0.3.26",
+    "wagmi": "1.0.5"
+  },
+  "devDependencies": {
+    "@mui/icons-material": "^5.11.16"
+  }
+}
