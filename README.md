@@ -1,17 +1,19 @@
-# Stargate Cross-chain testing
+# Cross-chain Deal
 
-**End-to-end cross-chain swap testing**
+**End-to-end cross-chain swaps built on Stargete**
 
-Testing cross-chain messages or swaps is not a regular smart contract integration test routine. Scripts need to be developed outside of the local test suite and commonly require a set of arguments to the test command.
+With the help of two JsonRPC providers, the test set-up will deploy the source and destination contracts on different networks and test the token swap between two different chains using the Stargate protocol.
 
-With this single-file approach, I intend to demonstrate the integration of cross-chain testing into the regular `hardhat test` command.
+-  Multiple RPC providers into the test file
+-  Deployment to different networks
+-  Attach a listener function to deployed contracts
+-  Wait and assert updates
 
-With the help of two JsonRPC providers, the test set-up will deploy the source and destination contracts and test the token swap between two different chains using the Stargate protocol.
-
-The test will sleep (delay execution) to allow transaction processing on Stargate contracts and start a cycle of queries to monitor its events until the desired parameters are asserted along with the update of the receiving contract balance.
+The test will sleep (delay execution) to allow transaction processing on Stargate contracts to happen, and start a cycle of queries to monitor its events until the desired properties are asserted for a valid test.
 
 **Configuration**
--   For the end-to-end testing to be completed you will need a testing account with test funds. The test script will try to pull the private key defined on the ```.env```file to create the deployer wallet and pay for the transactions.
+-   For the end-to-end testing to be completed you will need a testing account with [test funds](https://stargateprotocol.gitbook.io/stargate/developers/contract-addresses/testnet-faucet). Select the testnets of choice at the [Stargate Site](https://stargateprotocol.gitbook.io/stargate/developers/contract-addresses/testnet), select a [token here](https://stargateprotocol.gitbook.io/stargate/developers/contract-addresses/testnet-faucet), and request funds.
+-   The test script will try to pull the private key defined on the ```.env```file to create the deployer wallet and pay for the transactions.
 -   For the URL endpoints, I will use ANKER public RPC nodes.
 
 **Testing**
@@ -28,9 +30,3 @@ Existing bridges are forced to make trade-offs on the following core bridge feat
 -   Instant Guaranteed Finality
 -   Native Assets: No wrapped assets on the destination chain.
 -   Unified Liquidity: Access to a single liquidity pool across multiple chains.
-
-
-
-
-  
-
