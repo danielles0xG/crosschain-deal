@@ -6,7 +6,7 @@ With the help of two JsonRPC providers, the test set-up will deploy the source a
 
 -  Multiple RPC providers into the test file
 -  Deployment to different networks
--  Attach a listener function to deployed contracts
+- Listener function attached to each deployed contract
 -  Wait and assert updates
 
 The test will sleep (delay execution) to allow transaction processing on Stargate contracts to happen, and start a cycle of queries to monitor its events until the desired properties are asserted for a valid test.
